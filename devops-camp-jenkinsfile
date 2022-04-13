@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Application docker build') {
             steps {
-                echo "Building application image"
+                echo "Building application image..."
                 withCredentials([usernameColonPassword(credentialsId: 'bhuber-harbor-auth', variable: 'HARBOR-AUTH')]) {
                     script {
                         sh 'docker build -t $APP_IMAGE_NAME-$COMMIT_HASH -f ./app/Dockerfile ./afs-labs-student'
