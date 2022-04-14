@@ -7,7 +7,6 @@ pipeline {
         HARBOR_REGISTRY = 'harbor.dev.afsmtddso.com'
         HARBOR_PROJECT = 'bhuber-harbor-project'
         APP_IMAGE_NAME = 'app'
-        //don't need this DB_IMAGE_NAME = 'db'
     }
     stages {
         stage('Application repository') {
